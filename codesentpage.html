@@ -29,13 +29,13 @@
     }
     .container {
       width: 90%;
-      max-width: 350px;
+      max-width: 300px;
       padding: 30px;
       border-radius: 8px;
       background-color: #fff;
-      margin-right: 20%; /* Adjust this value to move the container towards the left */
+      margin-left: 40%; /* Adjust this value to move the container towards the left */
       margin: 0 auto;
-    transform: translateX(-5%); /* Adjust this value to move the container towards the left */
+    transform: translateX(5%); /* Adjust this value to move the container towards the left */
     }
     .input-field {
       display: block;
@@ -43,14 +43,7 @@
       position: relative;
       width: 100%;
     }
-    .text-field {
-      display: block;
-      margin-bottom: 80px;
-      font-size: 1.2em;
-      color: black;
-      
-    }
-
+  
 
     .input-field input {
       width: calc(100% - 30px); /* Adjusted width to fit within the container */
@@ -107,9 +100,10 @@
 </style>
   </head>
   <body>
-  <div class="container">
-    <jha-form-floating-group class="text-field">
-      <p>To help verify your identity,we have sent a text message to your Phone number with a one-time passcode.</p>
+   <div class="container">
+    <jha-form-floating-group class="input-field">
+      <input aria-labelledby="passcode-label" title="passcode" id="passcode" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Enter One-time Passcode" aria-label="Enter One-time Passcode">
+      <div id="passcode-label" class="label">Enter One time Passcode</div>
     </jha-form-floating-group>
     <jha-form-floating-group class="input-field">
       <input aria-labelledby="passcode-label" title="passcode" id="passcode" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Enter One-time Passcode" aria-label="Enter One-time Passcode">
