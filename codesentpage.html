@@ -33,21 +33,25 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      
     }
 
     .container {
-      width: 150%;
+      width: 100%;
       max-width: 400px; /* Adjusted for better appearance on larger screens */
       padding: 40px; /* Added padding */
       border-radius: 8px;
       background-color: #fff;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better visibility */
-      margin-top: 40px; /* Added margin-top */
-      margin-left: -30px;
+      margin-top: auto; /* Added margin-top */
+      
     }
 
     .input-field {
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .input-field2 {
       margin-bottom: 20px;
       position: relative;
     }
@@ -60,7 +64,19 @@
       border-radius: 5px;
       transition: border-color 0.3s ease-in-out;
     }
+    .input-field2 input {
+      width: 100%;
+      padding: 5px;
+      font-size: 1em;
+      border: 2px solid white;
+      border-radius: 5px;
+      transition: border-color 0.3s ease-in-out;
+    }
 
+    .input-field2 input:focus {
+      border-color: white;
+      outline: none;
+    }
     .input-field input:focus {
       border-color: rgb(2, 103, 51);
       outline: none;
@@ -76,7 +92,16 @@
       background: white;
       padding: 0 5px;
     }
-
+    .input-field2 .label {
+      position: absolute;
+      top: -20px; /* Adjusted for better appearance */
+      left: 10px;
+      font-size: 1.2em;
+      font-weight: normal;
+      color: black;
+      background: white;
+      padding: 0 5px;
+    }
     .request-new-passcode {
       color: rgb(2, 103, 51);
       display: block;
@@ -90,7 +115,7 @@
       background-color: rgb(2, 103, 51);
       color: white;
       padding: 10px 0;
-      font-size: 1.2em;
+      font-size: 1.3em;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -102,9 +127,9 @@
       background-color: rgb(1, 73, 36);
     }
 
-    h1, h3 {
-      color: black; /* Ensuring text color is black */
-      margin-bottom: 50px; /* Added margin-bottom */
+    h1 {
+      color: white /* Ensuring text color is black */
+      
       
 
     }
@@ -113,7 +138,22 @@
 </head>
 <body>
   <div class="container">
-    <h1 style="font-weight: normal;">To help verify your identity, we have sent a text message to your Phone number with a one-time passcode.</h1>
+
+    <div class="input-field2">
+      <input aria-labelledby="passcode-label" title="passcode" id="passcode2" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="" aria-label="Enter One-time Passcode">
+      <div id="passcode-label" class="label"><p>To help verify your identity, we have sent a text message to your Phone number with a one-time passcode.</p>
+        
+      </div>
+    </div>
+    <div class="h1">
+      <h1>code</code></h1>
+    </div>
+    
+    <div class="input-field2">
+      <input aria-labelledby="passcode-label" title="passcode" id="passcode2" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="" aria-label="Enter One-time Passcode">
+      <div id="passcode-label" class="label"></div></div>
+
+    
 
     <div class="input-field">
       <input aria-labelledby="passcode-label" title="passcode" id="passcode2" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Enter One-time Passcode" aria-label="Enter One-time Passcode">
@@ -124,7 +164,6 @@
     <button type="submit" class="jha-button"><strong>Continue</strong></button>
   </div>
 </form>
-
 <template shadowrootmode="open">
   <style class="sf-hidden">
     :host {
