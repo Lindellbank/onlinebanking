@@ -20,244 +20,109 @@
 <style>
     /* CSS Reset */
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50vh;
-      margin: 0;
-      
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
     }
 
     .container {
-      width: 100%;
-      max-width: 400px; /* Adjusted for better appearance on larger screens */
-      padding: 20px; /* Added padding */
-      border-radius: 8px;
-      background-color: #fff;
-      text-align: center;
-      margin-top: auto; /* Added margin-top */
-      
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .container h1 {
+        color: #026733;
+        margin-bottom: 20px;
+    }
+
+    .container p {
+        margin-bottom: 20px;
+        font-size: 1em;
+        line-height: 1.4em;
+        color: #333;
     }
 
     .input-field {
-      margin-bottom: 20px;
-      position: relative;
-    }
-    .input-field2 {
-      margin-bottom: -20px;
-      position: relative;
-    }
-    .input-field3 {
-      margin-bottom: 20px;
-      position: relative;
-    }
-    .input-field4 {
-      margin-bottom: 20px;
-      position: relative;
-    }
-    .input-field5 {
-      margin-bottom: 20px;
-      position: relative;
+        margin-bottom: 20px;
+        position: relative;
     }
 
     .input-field input {
-      width: 100%;
-      padding: 15px;
-      font-size: 1em;
-      border: 2px solid #ccc;
-      border-radius: 5px;
-      transition: border-color 0.3s ease-in-out;
-    }
-    .input-field2 input {
-      width: 100%;
-      padding: -10px;
-      font-size: 1em;
-      border: 2px solid white;
-      border-radius: 5px;
-      transition: border-color 0.3s ease-in-out;
-    }
-    .input-field3 input {
-      width: 100%;
-      padding: -10px;
-      font-size: 1em;
-      border: 2px solid white;
-      border-radius: 5px;
-      transition: border-color 0.3s ease-in-out;
+        width: 100%;
+        padding: 15px;
+        font-size: 1em;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease-in-out;
     }
 
-    .input-field4 input {
-      width: 100%;
-      padding: -10px;
-      font-size: 1em;
-      border: 2px solid white;
-      border-radius: 5px;
-      transition: border-color 0.3s ease-in-out;
-    }
-    .input-field5 input {
-      width: 100%;
-      padding: -10px;
-      font-size: 1em;
-      border: 2px solid white;
-      border-radius: 5px;
-      transition: border-color 0.3s ease-in-out;
-    }
-
-
-    .input-field2 input:focus {
-      border-color: white;
-      outline: none;
-    }
     .input-field input:focus {
-      border-color: rgb(2, 103, 51);
-      outline: none;
+        border-color: #026733;
+        outline: none;
     }
-    .input-field3 input:focus {
-      border-color: white;
-      outline: none;
-    }
-
-    .input-field4 input:focus {
-      border-color: white;
-      outline: none;
-    }
-    .input-field5 input:focus {
-      border-color: white;
-      outline: none;
-    }
-  
 
     .input-field .label {
-      position: absolute;
-      top: -20px; /* Adjusted for better appearance */
-      left: 10px;
-      font-size: 0.9em;
-      font-weight: bold;
-      color: rgb(2, 103, 51);
-      background: white;
-      padding: 0 5px;
+        position: absolute;
+        top: -17px;
+        left: 5px;
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #026733;
+        background: white;
+        padding: 0 5px;
     }
-    .input-field2 .label {
-      position: absolute;
-      top: -20px; /* Adjusted for better appearance */
-      left: -25px;
-      font-size: 1.2em;
-      font-weight: normal;
-      color: black;
-      background: white;
-      padding: 0 5px;
-    }
-    .input-field3 .label {
-      position: absolute;
-      top: -20px; /* Adjusted for better appearance */
-      left: -17px;
-      font-size: 1.2em;
-      font-weight: normal;
-      color: black;
-      background: white;
-      padding: 0 5px;
-    }
-    .input-field4 .label {
-      position: absolute;
-      top: -40px; /* Adjusted for better appearance */
-      left: -15px;
-      font-size: 1.2em;
-      font-weight: normal;
-      color: black;
-      background: white;
-      padding: 0 5px;
-    }
-    .input-field5 .label {
-      position: absolute;
-      top: -60px; /* Adjusted for better appearance */
-      left: 5px;
-      font-size: 1.2em;
-      font-weight: normal;
-      color: black;
-      background: white;
-      padding: 0 5px;
-    }
+
     .request-new-passcode {
-      color: rgb(2, 103, 51);
-      display: block;
-      margin-top: 10px;
-      text-decoration: none;
+        color: #026733;
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
     }
 
     .jha-button {
-      display: inline-block;
-      width: 60%; /* Make button full width */
-      background-color: rgb(2, 103, 51);
-      color: white;
-      padding: 10px 0;
-      font-size: 1.3em;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
-      margin-top: 20px;
+        display: inline-block;
+        width: 70%;
+        background-color: #026733;
+        color: white;
+        padding: 10px 0;
+        font-size: 1.3em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        margin-top: 20px;
     }
 
     .jha-button:hover {
-      background-color: rgb(1, 73, 36);
+        background-color: #014924;
     }
-
-    h1 {
-      color: white /* Ensuring text color is black */
-      
-      
-
-    }
-
-  </style>
+</style>
 </head>
 <body>
-  <div class="container">
-
-    <div class="input-field2">
-      <input aria-labelledby="passcode-label" title="passcode" id="passcode2" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="" aria-label="Enter One-time Passcode">
-      <div id="passcode-label" class="label"><p>To help verify your identity, we</p>
-        
-      </div>
-      <div class="input-field3">
-        <input aria-labelledby="passcode-label" title="passcode" id="passcode2" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="" aria-label="Enter One-time Passcode">
-        <div id="passcode-label" class="label"><p>have sent a text message to</p>
-          
-        </div>
-    </div>
-
-    <div class="input-field4">
-      <input aria-labelledby="passcode-label" title="passcode" id="passcode2" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="" aria-label="Enter One-time Passcode">
-      <div id="passcode-label" class="label"><p>your Phone number with a </p>
-        
-      </div>
-  </div>
-  <div class="input-field5">
-    <input aria-labelledby="passcode-label" title="passcode" id="passcode2" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="" aria-label="Enter One-time Passcode">
-    <div id="passcode-label" class="label"><p>one-time passcode.</p>
-      
-    </div>
-</div>
-    <div class="input-field2">
-      <input aria-labelledby="passcode-label" title="passcode" id="passcode2" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="" aria-label="Enter One-time Passcode">
-      <div id="passcode-label" class="label"></div></div>
-    </div>
-  
+<div class="container">
+    
+    <p>To help verify your identity, we have sent a text message to your Phone number with a one-time passcode.</p>
     <div class="input-field">
-      <input aria-labelledby="passcode-label" title="passcode" id="passcode" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Enter One-time Passcode" aria-label="Enter One-time Passcode">
-      <div id="passcode-label" class="label">Enter One-time Passcode</div>
+        <input aria-labelledby="passcode-label" title="passcode" id="passcode" type="text" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Enter One-time Passcode" aria-label="Enter One-time Passcode">
+        <div id="passcode-label" class="label">Enter One-time Passcode</div>
     </div>
-
     <a href="codesentpage.html" class="request-new-passcode">Request New Passcode</a>
     <button type="submit" class="jha-button">Continue</button>
-  </div>
+</div>
 </form>
 
 <template shadowrootmode="open">
